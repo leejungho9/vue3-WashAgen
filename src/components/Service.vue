@@ -1,6 +1,6 @@
 <template>
   <!--service area -->
-    <div class="service-area section" id="main_content2" >
+    <div class="service-area section" id="service" >
         <div class="main_title" >
             <h2  data-scroll="toggle(.fromTopIn, .fromTopOut)">세탁요원 서비스지역</h2>
             <p data-scroll="toggle(.fromTopIn, .fromTopOut)">세요권</p>
@@ -37,7 +37,6 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    margin-top: 60px;
 }
 .service-area .service3_img img {
     width: 600px;

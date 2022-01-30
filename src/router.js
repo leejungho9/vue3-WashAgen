@@ -1,18 +1,16 @@
 import { createWebHistory, createRouter } from "vue-router";
-import App from './components/App.vue'
-import Menual from './components/Menual.vue'
+
+import Home from './components/Home.vue'
+
 
 const routes = [
     { path: '/', 
-      component: App
+      component: Home
     },
-    { path: '/menual', 
-      component: Menual
-    },
-    {
-      path : '/:pathMatch(.*)',
-      component : App
-    },
+    // { path: '/login', 
+    //   component: Event
+    // },
+
   
   ];
   

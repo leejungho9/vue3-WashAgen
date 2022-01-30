@@ -1,5 +1,5 @@
 <template>
-  <div class="manual section block" id="main_content" >
+  <div class="manual section block" id="menual" >
     <div class="main_title">
       <h2 data-scroll="toggle(.fromTopIn, .fromTopOut)">세탁요원 이용방법</h2>
       <p data-scroll="toggle(.fromTopIn, .fromTopOut)">
@@ -9,48 +9,17 @@
     <div class="tab_menu">
       <ul class="menu">
         <li>
-          <a
-            class="tab active"
-            @click="
-              step = 0;
-              tabClick = 0;
-              tab1()
-            "
-            >1. 서비스 신청</a
-          >
+          <a class="tab active" @click=" step = 0; tabClick = 0; tab1()">1. 서비스 신청</a>
+        </li>
+        <li>
+          <a class="tab" @click=" step = 1; tabClick = 1; tab2()">2. 수거요청</a>
         </li>
         <li>
           <a
-            class="tab"
-            @click="
-              step = 1;
-              tabClick = 1;
-              tab2()
-            "
-            >2. 수거요청</a
-          >
+            class="tab" @click="step = 2; tabClick = 2; tab3() ">3. 세탁진행</a>
         </li>
         <li>
-          <a
-            class="tab"
-            @click="
-              step = 2;
-              tabClick = 2;
-              tab3()
-            "
-            >3. 세탁진행</a
-          >
-        </li>
-        <li>
-          <a
-            class="tab"
-            @click="
-              step = 3;
-              tabClick = 3;
-              tab4()
-            "
-            >4. 배달완료</a
-          >
+          <a class="tab" @click="step = 3; tabClick = 3; tab4() ">4. 배달완료</a>
         </li>
         <span class="border"></span>
       </ul>

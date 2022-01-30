@@ -1,20 +1,20 @@
 <template>
   <header>
         <div class="inner">
-            <div class="logo">
-                <a herf="/">세탁요원</a>
+            <div class="logo" >
+                <a href="/">세탁요원</a>
             </div>
 
             <div class="sub-menu">
                 <ul class="menu">
                     <li>
-                        <a href="#main_content">이용방법</a>
+                        <a href="#menual">이용방법</a>
                     </li>
                     <li>
-                        <a href="#main_content2">서비스지역</a>
+                        <a href="#service">서비스지역</a>
                     </li>
                     <li>
-                        <a href="#">이벤트</a>
+                        <a href="#event">이벤트</a>
                     </li>
                     <li>
                         <a href="#">로그인</a>
@@ -30,31 +30,38 @@ import { gsap } from "gsap";
 import _ from 'lodash';
 
 export default {
-    methods : {
-        
+    data() {
+        return {
+            headerColor : ''
+        }
     },
-
+   
+  
     mounted() {
         this.$nextTick(function () {
             // 전체 화면내용이 렌더링된 후에 아래의 코드가 실행됩니다.
-            
+            const header = document.querySelector('header');
+            header.style.backgroundColor = "transparent"
+
             window.addEventListener('scroll', _.throttle(function (){
+
             console.log(this.scrollY);
-            if(scrollY < 740) {
-                gsap.to ( document.querySelector('header') , .1, {
-                display : 'block',
-                background: 'inherit' })
-                
-            } else {
-                gsap.to ( document.querySelector('header'), .1, {
-                    backgroundColor : '#999'
-            })
-                
-            }
-        }))
+     
+                if(scrollY < 740) {
+                    gsap.to ( header , .1, {
+                    display : 'block',
+                    backgroundColor:'transparent'})
+                    
+                } else {
+                    gsap.to ( header , .1, {
+                        backgroundColor : '#999'
+                })
+                    
+                }
+            }))
         })
     },
-   
+
 }
 </script>
 
@@ -65,6 +72,7 @@ header {
     position: fixed;
     width:100%;
     z-index: 1;
+
 }
 
 header .inner {
