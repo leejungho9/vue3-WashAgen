@@ -35,9 +35,9 @@
         <div class="event">
             <div class="event__content">        
               <div class="event_img">
-                <img src="../assets/event2.png" alt="이벤트2" />
+                <img src="../assets/event3.png" alt="이벤트2" />
               </div>
-              <p class="event__title">[이벤트] 신규 가입 고객 누구나 5천원!sadsad</p>
+              <p class="event__title">[이벤트] 친구초대 이벤트</p>
             </div>
         </div>
 
@@ -45,9 +45,9 @@
         <div class="event">
             <div class="event__content">        
               <div class="event_img">
-                <img src="../assets/event2.png" alt="이벤트2" />
+                <img src="../assets/event4.png" alt="이벤트2" />
               </div>
-              <p class="event__title">[이벤트] 신규 가입 고객 누구나 5천원!sadsad</p>
+              <p class="event__title">[캠페인] 런드리고 환경 캠페인</p>
             </div>
         </div>
       </div>
@@ -112,9 +112,13 @@ export default {
   width: 100%;
   justify-content: center;
 }
+.events .tab-conent .step1_event .event_img img:hover{
+      transform: scale(1.05); 
+}
 .events .tab-conent .step1_event .event_img img {
   width: 90%;
   border-radius: 10px;
+  cursor: pointer;
 }
 /*tab-content event */
 .events .items {

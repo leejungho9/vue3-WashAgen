@@ -16,7 +16,7 @@
             <div class="circle circle4">판교</div>
             <div class="circle circle5">위례</div>
         </div>
-        <h2>해당 지역에서 세탁요원을 이용하실 수 있습니다.</h2>
+        <h2 class="area_text">해당 지역에서 세탁요원을 이용하실 수 있습니다.</h2>
     </div>
 </template>
 
@@ -36,7 +36,8 @@ export default {
 .service-area .service3_img {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    width: 750px;
+    margin: auto;
 }
 .service-area .service3_img img {
     width: 600px;
@@ -47,7 +48,12 @@ export default {
     line-height: 4;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 20px;
+    width: 750px;
+    margin: auto;
+}
+.service-area .area_text{
+    width: 750px;
+    margin: auto;
 }
 .service-area .area .circle{
     width : 70px;
@@ -58,5 +64,6 @@ export default {
 }
 .service-area h2 {
     text-align: center;
+
 }
 </style>
