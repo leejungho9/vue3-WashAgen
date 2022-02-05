@@ -1,4 +1,5 @@
 <template>
+  <Banner/>
   <Menual />
   <Service/>
   <Event />
@@ -7,6 +8,7 @@
 
 <script>
 import Menual from './Menual.vue'
+import Banner from './Banner.vue'
 import Service from './Service.vue'
 import Event from './Event.vue'
 
@@ -15,7 +17,7 @@ import Event from './Event.vue'
 export default {
 name: 'Home',
   components: {
-    Menual,Service,Event
+    Menual,Service,Event,Banner
   }, 
   data() {
       return {

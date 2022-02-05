@@ -17,26 +17,38 @@
                         <a href="#event">이벤트</a>
                     </li>
                     <li>
-                        <a href="#">로그인</a>
+                        <a href="/login" @click="BannerOn=false">로그인</a>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
+
 </template>
 
 <script>
 import { gsap } from "gsap";
 import _ from 'lodash';
 
+
 export default {
+    components: {
+
+    },
     data() {
         return {
-            headerColor : ''
+            headerColor : '',
+
         }
     },
-   
-  
+    props: {
+      
+    },
+    methods: {
+        stepUp() {
+            this.$emit('stepUp')
+        }
+    },
     mounted() {
         this.$nextTick(function () {
             // 전체 화면내용이 렌더링된 후에 아래의 코드가 실행됩니다.
@@ -65,13 +77,13 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 
 /*HEADER*/
 header {
     position: fixed;
     width:100%;
-    z-index: 1;
+    z-index: 2;
 
 }
 
