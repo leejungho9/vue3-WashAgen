@@ -1,4 +1,5 @@
 <template>
+  <div class="header" v-if=" mainIs == false"></div>
   <!--service area -->
     <div class="service-area section" id="service" >
         <div class="main_title" >
@@ -22,7 +23,9 @@
 
 <script>
 export default {
-
+     props : {
+      mainIs : Boolean
+    },
 }
 </script>
 
@@ -49,11 +52,11 @@ export default {
     text-align: center;
     font-weight: bold;
     width: 750px;
-    margin: auto;
+    margin: 20px auto;
 }
-.service-area .area_text{
+.service-area .area_text {
     width: 750px;
-    margin: auto;
+    margin: 20px auto;
 }
 .service-area .area .circle{
     width : 70px;
@@ -65,5 +68,14 @@ export default {
 .service-area h2 {
     text-align: center;
 
+}
+.header{
+    position: sticky;
+    width: 100%;
+    background-color: rgb(155 153 153);
+    height: 60px;
+    top:0;
+    z-index : 1;
+    
 }
 </style>

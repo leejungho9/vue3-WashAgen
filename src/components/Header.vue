@@ -2,22 +2,22 @@
   <header>
         <div class="inner">
             <div class="logo" >
-                <a href="/">세탁요원</a>
+                <a href="/"  @click="HomeParams()" >세탁요원</a>
             </div>
 
             <div class="sub-menu">
                 <ul class="menu">
                     <li>
-                        <a href="#menual">이용방법</a>
+                        <a href="/Menual" @click="MenualParams()">이용방법</a>
                     </li>
                     <li>
-                        <a href="#service">서비스지역</a>
+                        <a href="/Service" @click="ServiceParams()">서비스지역</a>
                     </li>
                     <li>
-                        <a href="#event">이벤트</a>
+                        <a href="/Event" @click="EventParams()">이벤트</a>
                     </li>
                     <li>
-                        <a href="/login" @click="BannerOn=false">로그인</a>
+                        <a href="/login">로그인</a>
                     </li>
                 </ul>
             </div>
@@ -47,6 +47,18 @@ export default {
     methods: {
         stepUp() {
             this.$emit('stepUp')
+        },
+        MenualParams() {
+         this.$router.push({name : "Menual", params : {mainIs : false }})
+        },
+        ServiceParams() {
+         this.$router.push({name : "Service", params : {mainIs : false }})
+        },
+        EventParams() {
+         this.$router.push({name : "Event", params : {mainIs : false }})
+        },
+        HomeParams() {
+         this.$router.push({name : "Home" , params : {mainIs : true }})
         }
     },
     mounted() {
@@ -116,7 +128,7 @@ header .inner .sub-menu ul{
     align-items: center;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: auto 0;
 }
 

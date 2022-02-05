@@ -1,4 +1,5 @@
 <template>
+  <div class="header" v-if=" mainIs == false"></div>
 <!--event area -->
    <div class="events section" id="event" >
     <div class="main_title">
@@ -59,8 +60,9 @@
 <script>
 
 export default {
-  components: {  },
-
+   props : {
+      mainIs : Boolean
+    },
 
 }
 </script>
@@ -142,5 +144,14 @@ export default {
     
     transform: translate(0,-70px);
     opacity: 0.0;
+}
+.header{
+    position: sticky;
+    width: 100%;
+    background-color: rgb(155 153 153);
+    height: 60px;
+    top:0;
+    z-index : 1;
+    
 }
 </style>

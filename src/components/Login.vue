@@ -11,7 +11,7 @@
               <button class="loginBtn">로그인</button>
               <button class="joinBtn">회원가입</button>
               <span class="btnSpan">아이디 / 비밀번호 찾기</span>
-              <button class="kakaoBtn">카카오계정으로 로그인</button>
+              <button class="kakaoBtn"><img class="kakaoIcon" src="	https://ovenapp.io/static/icons/2-Stuff-ElegantThemes/chat.svg"/>카카오계정으로 로그인</button>
           </div>
 
       </div>
@@ -102,14 +102,21 @@ Button {
 }
 .kakaoBtn{
     height: 50px;
-    width : 400px;
+    width: 400px;
     margin: 5px 0;
-    background-color:#fae100;
-    border :0;
-    color : #333;
-    font-size: 13px;
+    background-color: #fae100;
+    border: 0;
+    color: #333;
+    font-size: 14px;
     font-weight: 700;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.kakaoIcon{
+    width: 20px;
+    height: 20px;
+    padding: 0 10px;
+}
 </style>

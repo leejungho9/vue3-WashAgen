@@ -1,8 +1,8 @@
 <template>
   <Banner/>
-  <Menual />
-  <Service/>
-  <Event />
+  <Menual  :mainIs="mainIs" />
+  <Service :mainIs="mainIs" />
+  <Event   :mainIs="mainIs" />
 
 </template>
 
@@ -21,9 +21,10 @@ name: 'Home',
   }, 
   data() {
       return {
-          BannerStatus : true
+          mainIs : true
       }
   },
+  
   mounted() {
 
             window.onload = function(){

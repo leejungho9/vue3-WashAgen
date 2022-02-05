@@ -1,4 +1,5 @@
 <template>
+  <div class="header" v-if=" mainIs == false"></div>
   <div class="manual section block" id="menual" >
     <div class="main_title">
       <h2 data-scroll="toggle(.fromTopIn, .fromTopOut)">세탁요원 이용방법</h2>
@@ -168,6 +169,9 @@ export default {
 
         }
     },
+    props : {
+      mainIs : Boolean
+    },
     methods:{   
         tab1() {
             let border = document.querySelector(".border");
@@ -185,6 +189,7 @@ export default {
             let border = document.querySelector(".border");
             border.style.transform = 'translateX(560px)';
         },
+        
     },
     watch : {
         tabClick(a,b) {
@@ -203,7 +208,11 @@ export default {
                       out: 'fromTopOut'
                   }
               }
-          })      
+          })   
+          
+ 
+         
+          console.log(this.mainIs)
     },
 }
 </script>
@@ -409,5 +418,14 @@ export default {
 hr{
   width: 707px;
   background-color: #999;
+}
+.header{
+    position: sticky;
+    width: 100%;
+    background-color: rgb(155 153 153);
+    height: 60px;
+    top:0;
+    z-index : 1;
+    
 }
 </style>
