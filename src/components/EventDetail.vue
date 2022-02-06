@@ -30,7 +30,7 @@ export default {
 }
 .container{
   min-height: 750px;
-  background-color: red;
+ 
   padding: 60px;
 }
 
