@@ -1,13 +1,13 @@
 <template>
   <Header/>
-  <router-view></router-view>
+  <router-view :eventDatas="eventDatas"> </router-view>
   <Footer/>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-
+import eventDatas from "./assets/event.js"
 
 
 export default {
@@ -17,6 +17,7 @@ export default {
   }, 
     data() {
       return {
+        eventDatas:eventDatas
       }
   },
  

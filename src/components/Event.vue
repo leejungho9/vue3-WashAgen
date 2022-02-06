@@ -8,49 +8,24 @@
         세탁요원이 진행하는 다양한 이벤트 
       </p>
     </div>
+
+
     <!-- 11111111111111111111111111111111111111111111111111111111111-->
     <!--CONTENT1 -->
     <div id="tab1" class="tab-conent items active">
-      <!--SERVICE -->
+      <!--SERVICE --> 
       <div class="step1_event">
         <!-- SERVICE1 -->
-        <div class="event">
+       
+        <div class="event" v-for="(eventData, i ) in eventDatas" :key="i" @click="$router.push(`/EventDetail/`+i)">
             <div class="event__content">        
               <div class="event_img">
-                <img src="../assets/event1.png" alt="이벤트1" />
+                <img :src="eventData.img" alt="이벤트" />
               </div>
-              <p class="event__title">[이벤트] 사전가입만 해도 세탁지원금 1만원!</p>
+              <p class="event__title"> {{eventData.title}}</p>
             </div>
         </div>
 
-      <!-- SERVICE2 -->
-        <div class="event">
-            <div class="event__content">        
-              <div class="event_img">
-                <img src="../assets/event2.png" alt="이벤트2" />
-              </div>
-              <p class="event__title">[이벤트] 신규 가입 고객 누구나 5천원!sadsad</p>
-            </div>
-        </div>
-        <!-- SERVICE2 -->
-        <div class="event">
-            <div class="event__content">        
-              <div class="event_img">
-                <img src="../assets/event3.png" alt="이벤트2" />
-              </div>
-              <p class="event__title">[이벤트] 친구초대 이벤트</p>
-            </div>
-        </div>
-
-        <!-- SERVICE2 -->
-        <div class="event">
-            <div class="event__content">        
-              <div class="event_img">
-                <img src="../assets/event4.png" alt="이벤트2" />
-              </div>
-              <p class="event__title">[캠페인] 런드리고 환경 캠페인</p>
-            </div>
-        </div>
       </div>
     </div>
   </div>
@@ -58,10 +33,21 @@
 </template>
 
 <script>
+import eventDatas from "../assets/event.js"
+
 
 export default {
    props : {
-      mainIs : Boolean
+      mainIs : Boolean,
+    },
+    methods:{
+
+    },
+    data() {
+      return{
+        eventDatas : eventDatas
+
+      }
     },
 
 }

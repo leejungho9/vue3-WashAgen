@@ -5,13 +5,13 @@ import Menual from './components/Menual.vue'
 import Service from './components/Service.vue'
 import Event from './components/Event.vue'
 import login from './components/Login.vue'
+import EventDetail from './components/EventDetail.vue'
 
 
 
 const routes = [
     { path: '/', 
       component: Home,
-      params: true,
       name : Home,
       props: true
     },
@@ -23,16 +23,18 @@ const routes = [
     },
     { path: '/Service', 
       component: Service,
-      query: false,
       name : Service,
       props: true
     },
     { path: '/Event', 
       component: Event,
-      query: false,
       name : Event,
       props: true
     },
+    { path: '/EventDetail/:id', 
+      component: EventDetail,
+
+  },
     { path: '/login', 
       component: login
     },
