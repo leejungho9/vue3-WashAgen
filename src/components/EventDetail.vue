@@ -2,10 +2,11 @@
   <div class="header"></div>
    
     <div class="container">
-        
-        <h5>fsdfs</h5>
-        <h5>{{eventDatas[1].title}}</h5>
-
+        <div class="inner">
+            <h2>{{eventDatas[this.$route.params.id].title}}</h2>
+            <img class="eventdetail" :src="eventDatas[this.$route.params.id].dimg" alt="이벤트"  />
+        </div>
+            
     </div>
 
 </template>
@@ -15,7 +16,8 @@ export default {
     name: 'EventDetail',
     props : {
         eventDatas : Object
-    }
+    },
+
 }
 </script>
 
@@ -29,9 +31,13 @@ export default {
     z-index : 1;
 }
 .container{
-  min-height: 750px;
- 
+  height: 1500px;
   padding: 60px;
+  
+}
+
+.eventdetail{
+  width : 600px
 }
 
 </style>
